@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxPayer Records Management</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i data-feather="file-text"></i> TaxPayer Records Management</h1>
+        </header>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchTid" placeholder="Search by TID...">
+                <button id="searchBtn">
+                    <i data-feather="search"></i> Search
+                </button>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2><i data-feather="user-plus"></i> Add New TaxPayer</h2>
+            <form id="taxpayerForm">
+                <div class="form-group">
+                    <label for="tid">TID:</label>
+                    <input type="text" id="tid" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                <button type="submit">
+                    <i data-feather="save"></i> Save Record
+                </button>
+            </form>
+        </div>
+
+        <div class="records-section">
+            <h2><i data-feather="list"></i> TaxPayer Records</h2>
+            <div id="recordsList"></div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <i data-feather="loader"></i>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
